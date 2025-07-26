@@ -1,4 +1,4 @@
-resource "aws_instance" "demoone" {
+resource "aws_instance" "webserver" {
     ami = var.ami
     instance_type = var.instancetype
     vpc_security_group_ids = [for secuiritygroup in aws_security_group.server : secuiritygroup.id]
